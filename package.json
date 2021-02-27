@@ -1,7 +1,7 @@
 {
   "name": "@siriwatknp/react-tailwind-trial",
   "author": "siriwatknp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

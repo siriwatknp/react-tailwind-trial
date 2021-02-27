@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/siriwatknp/react-tailwind-trial/compare/v1.0.0...v1.0.1) (2021-02-27)
+
+
+### Bug Fixes
+
+* 🐛 set publishConfig access to "public" ([bfbfc08](https://github.com/siriwatknp/react-tailwind-trial/commit/bfbfc08147685f6fd029030ccd477f6a98414ba2))
+
 # 1.0.0 (2021-02-27)
 
 
