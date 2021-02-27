@@ -18,14 +18,16 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "NODE_ENV=production yarn build:tailwind && tsdx build",
+    "postbuild": "ncp src/tailwind.css dist/tailwind.css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build:tailwind": "tailwindcss-cli build ./src/tailwind.dev.css -o ./src/tailwind.css",
+    "storybook": "yarn build:tailwind && start-storybook -p 6006",
+    "build-storybook": "NODE_ENV=production yarn build:tailwind && build-storybook",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
@@ -66,13 +68,18 @@
     "@types/react-dom": "^17.0.1",
     "babel-loader": "^8.2.2",
     "husky": "^5.1.1",
+    "ncp": "^2.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "semantic-release": "^17.4.0",
     "size-limit": "^4.9.2",
+    "tailwindcss-cli": "^0.1.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
     "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1"
   }
 }
