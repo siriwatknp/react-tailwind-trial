@@ -25,7 +25,6 @@
     "postbuild": "ncp src/tailwind.css dist/tailwind.css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "build:tailwind": "tailwindcss-cli build ./src/tailwind.dev.css -o ./src/tailwind.css",
