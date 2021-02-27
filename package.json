@@ -9,6 +9,9 @@
   "repository": {
     "url": "https://github.com/siriwatknp/react-tailwind-trial"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "src"
